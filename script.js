@@ -9,9 +9,31 @@ cardContainer.innerHTML = '';
 
 //chiamata ajax all'api
 axios.get(apiRef).then((response) => {
-    //estrapoliamo i dati
+
+    //estrapolo i dati
     const photos  = response.data;
-    console.log('Dati ricevuti', photos);
-    
+    //console.log('Dati ricevuti', photos);
+
+    //creo variabile di accumulo
+    let cardsHtml = '';
+
+    //ciclo l'array "photos" con forEach. Per ogni elemento "photo" trovato.
+    photos.forEach(photo => {
+        cardsHtml += `
+            <div class="card">
+                <img class="pin" src="img/pin.svg" alt="puntina">
+                
+                <img class="photo-card" src="${photo.url}" alt="${photo.title}">
+                
+                <div class="photo-details">
+                    <span class="photo-date">${photo.date}</span>
+                    <h3>${photo.title}</h3>
+                </div>
+            </div>
+        `;
+    });
+
+    // Dopo che il ciclo ha finito di costruire la stringa con tutte le card la inserisco nella pagina.
+    cardContainer.innerHTML = cardsHtml;
 }
 )

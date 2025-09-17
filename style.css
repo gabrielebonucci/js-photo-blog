@@ -57,7 +57,13 @@ header{
 
 .photo-details h3{
     font-family: 'Edu Tas Beginner', sans-serif;
-    margin-top: 15px;
-    font-weight: normal;
+    font-size: 30px;
+}
 
+.photo-date{
+    display: block;
+    font-family: 'Sometype Mono', monospace;
+    color: grey;
+    font-size: 0.9em;
+    margin-bottom: 5px;
 }
