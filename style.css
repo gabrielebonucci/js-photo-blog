@@ -38,7 +38,7 @@ header{
     transform: translate(-50%, -50%); 
     width: 30px; 
     /* Assicura che la puntina stia sopra gli altri elementi */
-    z-index: 10;     
+    z-index: 1;     
 }
 
 .card{
@@ -66,4 +66,20 @@ header{
     color: grey;
     font-size: 0.9em;
     margin-bottom: 5px;
+}
+
+/*hover*/
+.card, .pin {
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(10deg);
+    box-shadow: 5px 5px 15px 5px;
+    z-index: 2;
+}
+.card:hover .pin{
+    opacity: 0;
+    transform: translate(-50%, -150%);
+
 }
