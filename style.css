@@ -32,7 +32,7 @@ header{
 
 .pin{
     position: absolute;
-    top: 3px;
+    top: 7px;
     left: 50%;
     /* Sposta l'immagine indietro di metà della sua larghezza e in su di metà della sua altezza */
     transform: translate(-50%, -50%); 
@@ -57,4 +57,6 @@ header{
 .photo-details h3{
     font-family: 'Edu Tas Beginner', sans-serif;
     margin-top: 15px;
+    font-weight: normal;
+
 }
