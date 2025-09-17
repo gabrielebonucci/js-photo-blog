@@ -29,14 +29,27 @@ header{
     max-width: 1050px;
     margin: 50px auto;
 }
+
+.pin{
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    /* Sposta l'immagine indietro di metà della sua larghezza e in su di metà della sua altezza */
+    transform: translate(-50%, -50%); 
+    width: 30px; 
+    /* Assicura che la puntina stia sopra gli altri elementi */
+    z-index: 10;     
+}
+
 .card{
+    position: relative;
     background-color: white;
     width: 300px;
-    padding: 10px;
+    padding: 15px;
     box-shadow: 0px 0px 10px 0px;
 }
 
-.photo-card img{
+.photo-card {
     width: 100%;
     height: 250px;
 }
