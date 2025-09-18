@@ -35,5 +35,15 @@ axios.get(apiRef).then((response) => {
 
     // Dopo che il ciclo ha finito di costruire la stringa con tutte le card la inserisco nella pagina.
     cardContainer.innerHTML = cardsHtml;
-}
-)
+
+    //seleziono ogni card
+    const cards = document.querySelectorAll(".card");
+    console.log(cards);
+    
+    //associo ad ogni car un evento
+    cards.forEach(cardItem => {
+        cardItem.addEventListener('click', () => {
+
+        })
+    })
+})
