@@ -97,6 +97,7 @@ header{
     display: flex; /* visibile per ora */
     justify-content: center;
     z-index: 100;
+    display: none; /*nascosto di default*/
 }
 
 .overlay-content {
@@ -118,4 +119,8 @@ header{
     padding: 5px 10px;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.show{
+    display: flex;
 }
