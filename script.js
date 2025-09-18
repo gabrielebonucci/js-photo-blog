@@ -1,6 +1,8 @@
 // seleziono elemento di output
 const cardContainer = document.querySelector('.card-container');
 const closeButton = document.getElementById('overlay-close')
+const overlay = document.getElementById('overlay');
+const overlayImage = document.getElementById('overlay-image');
 
 //setto la variabile dell'endpoint
 const apiRef = 'https://lanciweb.github.io/demo/api/pictures/';
@@ -41,17 +43,26 @@ axios.get(apiRef).then((response) => {
     const cards = document.querySelectorAll(".card");
     console.log(cards);
     
-    //associo ad ogni car un evento
+    //associo ad ogni card un evento
     cards.forEach(cardItem => {
         cardItem.addEventListener('click', () => {
+            // Trovo l'immagine specifica dentro la card che è stata cliccata
+            const imageCard = cardItem.querySelector('.photo-card');
+           //prendo i suo attributi
+            const imgSrc = imageCard.src;
+            const imgAlt = imageCard.alt;
+           //imposto src e alt sull'immagine overlay
+            overlayImage.src = imgSrc;
+            overlayImage.alt = imgAlt;
+            
+            //mostra overlay
             overlay.classList.add('active')
-
         })
     })
 
     //bottone "chiudi" overlay
     closeButton.addEventListener('click', () => {
-      overlay.classList.remove('active');
+    overlay.classList.remove('active');
 
 });
 })

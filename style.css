@@ -52,7 +52,6 @@ header{
 .photo-card {
     width: 100%;
     height: 250px;
-    object-fit: cover;
     cursor: pointer;
 }
 
@@ -123,4 +122,5 @@ header{
 
 .active{
     display: flex;
+
 }
