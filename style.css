@@ -121,6 +121,6 @@ header{
     cursor: pointer;
 }
 
-.show{
+.active{
     display: flex;
 }

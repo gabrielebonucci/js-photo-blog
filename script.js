@@ -1,5 +1,6 @@
 // seleziono elemento di output
 const cardContainer = document.querySelector('.card-container');
+const closeButton = document.getElementById('overlay-close')
 
 //setto la variabile dell'endpoint
 const apiRef = 'https://lanciweb.github.io/demo/api/pictures/';
@@ -43,7 +44,14 @@ axios.get(apiRef).then((response) => {
     //associo ad ogni car un evento
     cards.forEach(cardItem => {
         cardItem.addEventListener('click', () => {
+            overlay.classList.add('active')
 
         })
     })
+
+    //bottone "chiudi" overlay
+    closeButton.addEventListener('click', () => {
+      overlay.classList.remove('active');
+
+});
 })
