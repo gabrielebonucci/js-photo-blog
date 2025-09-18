@@ -84,3 +84,30 @@ header{
     transform: translate(-50%, -150%);
 
 }
+
+/*overlay*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; /* visibile per ora */
+    justify-content: center;
+    z-index: 100;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+}
+
+#overlay-close {
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
